@@ -33,7 +33,7 @@ map(callbackFn, thisArg)
 
 ### Return value
 
-A new typed array with each element being the result of the callback function.
+A new typed array of the same type with each element being the result of the callback function.  The function will throw a {{jsxref("TypeError")}} if a result is not implicitly convertible to the underlying type.
 
 ## Description
 
@@ -64,6 +64,16 @@ const numbers = new Uint8Array([1, 4, 9]);
 const doubles = numbers.map((num) => num * 2);
 // doubles is now Uint8Array [2, 8, 18]
 // numbers is still Uint8Array [1, 4, 9]
+```
+
+### {{jsxref("BigInt")}} values are not convertible to numbers
+
+```js
+const numbers = Int8Array .of (0)
+const bigints = numbers .map (BigInt) // throws a TypeError
+// use an iterator to map to an incompatible type
+const bigints = BigInt64Array .from (numbers .values () .map (BigInt))
+// bigints is now BigInt64Array [0n]
 ```
 
 ## Specifications
