@@ -17,8 +17,6 @@ Depending on the kind of element being changed and the way the user interacts wi
 - When the user commits the change explicitly (e.g., by selecting a value from a {{HTMLElement("select")}}'s dropdown with a mouse click, by selecting a date from a date picker for `{{HTMLElement('input/date', '&lt;input type="date"&gt;')}}`, by selecting a file in the file picker for `{{HTMLElement('input/file', '&lt;input type="file"&gt;')}}`, etc.);
 - When the element loses focus after its value was changed: for elements where the user's interaction is typing rather than selection, such as a {{HTMLElement("textarea")}} or the `{{HTMLElement('input/text', 'text')}}`, `{{HTMLElement('input/search', 'search')}}`, `{{HTMLElement('input/url', 'url')}}`, `{{HTMLElement('input/tel', 'tel')}}`, `{{HTMLElement('input/email', 'email')}}`, or `{{HTMLElement('input/password', 'password')}}` types of the {{HTMLElement('input')}} element.
 
-The HTML specification lists [the `<input>` types that should fire the `change` event](https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply).
-
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
